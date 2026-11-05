@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fde-onboarding"
+version = "0.1.0"
+description = "Self-serve multi-tenant onboarding flow engine with resumable state and time-to-first-value analytics"
+requires-python = ">=3.11"
+dependencies = ["fastapi", "pydantic>=2"]
+
+[project.optional-dependencies]
+test = ["pytest", "httpx"]
+
+[tool.setuptools.packages.find]
+include = ["fde_onboarding*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
